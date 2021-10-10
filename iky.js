@@ -2743,7 +2743,7 @@ case 'cekbapak': // By Ramlan ID
               try {
               if (!q) return reply('Linknya?')
               reply(mess.wait)
-              res = await axios.get(`https://api.lolhuman.xyz/api/instagramreel?apikey=79c4683acff3cb4fbddbc08a&url=${args[0]}`)
+              res = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=79c4683acff3cb4fbddbc08a&url=${args[0]}`)
               for(let i = 0; i < res.data.result.length; i++) {
               sendMediaURL(from, res.data.result[i].url, `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
 ┆ *INSTAGRAM MEDIA*
@@ -3071,11 +3071,11 @@ if (!q) return reply('Linknya?')
              console.log(res)
 })
              break
-      case 'ssweb':
+      case 'shortlink':
         if (!isRegister) return reply(mess.regits)
              if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/`)
              ini_link = args[0]
-             ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ssweb?apikey=${setting.lolkey}&url=${ini_link}`)
+             ini_buffer = await getBuffer(`https://api.xteam.xyz/shorturl/bitly?url=${ini_link}&APIKEY=4ea2f5b23aef889d`)
              await ikyy.sendMessage(from, ini_buffer, image, { quoted: mek })
              break
        case 'nhentaipdf':
